@@ -27,10 +27,9 @@ export const moneyFilter = (money: MoneyType[], filterValue: BanknotsType): Mone
 }
 
 function App() {
-    const [money, setMoney] = useState<MoneyType[]>(defaultMoney)
     const [filterValue, setFilterValue] = useState<BanknotsType>('ALL')
 
-    const filteredMoney = moneyFilter(money, filterValue)
+    const filteredMoney = moneyFilter(defaultMoney, filterValue)
     return (
         <div className="App">
             <Country
